@@ -1,10 +1,15 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveJobApplication } from "../utility/localstorage";
 
 const DetailsJob = () => {
   const details = useLoaderData();
   const { jobId } = useParams();
-  console.log(jobId);
-  const item = details.find((detail) => detail.id == jobId);
+  const intId = parseInt(jobId);
+  console.log(intId);
+  const item = details.find((detail) => detail.id === intId);
+  const handleApplyJob = () => {
+    saveJobApplication(intId);
+  };
 
   return (
     <div>
@@ -15,7 +20,9 @@ const DetailsJob = () => {
         </div>
         <div className="border">
           <h2 className="text-2xl">Side things</h2>
-          <button className="btn btn-primary w-full">Apply Now</button>
+          <button onClick={handleApplyJob} className="btn btn-primary w-full">
+            Apply Now
+          </button>
         </div>
       </div>
     </div>
