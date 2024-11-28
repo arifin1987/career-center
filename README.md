@@ -1,8 +1,13 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## https://career-upgrade.netlify.app/
 
-Currently, two official plugins are available:
+##steps to deploy on netlify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##npm run build
+
+## copy and paste dist folder to netlify
+
+## open \_redirects file to public and write /\* /index.html 200
+
+## again npm run build and paste dist folder to Deploys
